@@ -15,6 +15,7 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   // const [modalIsOpen, setModalIsOpen] = useState(false);
+
   const fetchImages = async () => {
     setLoading(true);
     try {
@@ -35,6 +36,7 @@ export default function App() {
       fetchImages();
     }
   }, [query, page]);
+
   const handleSearchSubmit = (newQuery) => {
     setQuery(newQuery);
     setPage(1);
@@ -59,6 +61,7 @@ export default function App() {
     setIsModalOpen(false);
     setSelectedImage(null);
   };
+
   return (
     <div>
       <SearchBar onSubmit={handleSearchSubmit} />
