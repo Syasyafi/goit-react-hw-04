@@ -20,7 +20,7 @@ export default function App() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.unsplash.com/search/photos?query=${query}&page=${page}&client_id=PvjMb00TBZQMjBYGyHn64d4ju2tX37ge2hlt-_SJJqA`
+        `https://api.unsplash.com/search/photos?query=${query}&page=${page}&client_id=07fmZ1TQnrpa87xmv0JHko1_XRCSX8MBMjPiKPVGBtA`
       );
       const data = await response.json();
       setImages((prevImages) => [...prevImages, ...data.results]);
