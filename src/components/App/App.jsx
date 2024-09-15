@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 import SearchBar from "../SearchBar/SearchBar";
 import ImageGallery from "../ImageGallery/ImageGallery";
 import Loader from "../Loader/Loader";
