@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import SearchBar from "../../components/SearchBar/SearchBar";
-import ImageGallery from "../../components/ImageGallery/ImageGallery";
-import Loader from "../../components/Loader/Loader";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
-import ImageModal from "../../components/ImageModal/ImageModal";
+import SearchBar from "../SearchBar/SearchBar";
+import ImageGallery from "../ImageGallery/ImageGallery";
+import Loader from "../Loader/Loader";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
+import ImageModal from "../ImageModal/ImageModal";
 
 export default function App() {
   const [images, setImages] = useState([]);
@@ -20,7 +20,7 @@ export default function App() {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.unsplash.com/search/photos?query=${query}&page=${page}&client_id=07fmZ1TQnrpa87xmv0JHko1_XRCSX8MBMjPiKPVGBtA`
+        `https://api.unsplash.com/search/photos?query=${query}&page=${page}&client_id=PvjMb00TBZQMjBYGyHn64d4ju2tX37ge2hlt-_SJJqA`
       );
       const data = await response.json();
       setImages((prevImages) => [...prevImages, ...data.results]);
